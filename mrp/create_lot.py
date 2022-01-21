@@ -2,7 +2,7 @@
 from odoo import _, api, models
 
 class MRPOperationsInherit(models.Model):
-    _inherit = ['mrp.production']
+    _inherit = "mrp.production"
 
     def action_generate_serial(self):
         self.ensure_one()
