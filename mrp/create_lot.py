@@ -3,7 +3,6 @@ from odoo import _, api, models
 from odoo.exceptions import UserError
 
 class MrpProduction(models.Model):
-    _name = 'mrp.production'
     _description = 'Production Order'
     _date_name = 'date_planned_start'
     _inherit = ['mail.thread', 'mail.activity.mixin']
