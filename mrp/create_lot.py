@@ -1,14 +1,8 @@
 
 from odoo import _, api, models
-from odoo.exceptions import UserError
 
-class MrpProduction(models.Model):
-    _description = 'Production Order'
-    _date_name = 'date_planned_start'
-    _inherit = ['mail.thread', 'mail.activity.mixin']
-    _order = 'priority desc, date_planned_start asc,id'
-
-
+class MRPOperationsInherit(models.Model):
+    _inherit = ['mrp.production']
 
     def action_generate_serial(self):
         self.ensure_one()
